@@ -104,6 +104,12 @@
     0%, 100% { filter: drop-shadow(0 0 2px #61dafb); }
     50% { filter: drop-shadow(0 0 8px #61dafb); }
   }
+
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 }
 
 .keno-board {
@@ -119,4 +125,13 @@
 
 .number-cell:hover {
   animation: glow 1.5s ease-in-out infinite;
+}
+
+.betting-amount-selected {
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400% 400%;
+  animation: rainbow 5s ease infinite;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
